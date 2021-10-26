@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newAppsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +47,6 @@
             this.btnAddApp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.appPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.newAppsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             this.tabs.SuspendLayout();
             this.tabGame.SuspendLayout();
@@ -80,14 +81,22 @@
             // 
             this.addAppToolStripMenuItem.Name = "addAppToolStripMenuItem";
             this.addAppToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.addAppToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addAppToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.addAppToolStripMenuItem.Text = "New Games";
             this.addAppToolStripMenuItem.Click += new System.EventHandler(this.addAppToolStripMenuItem_Click);
+            // 
+            // newAppsToolStripMenuItem
+            // 
+            this.newAppsToolStripMenuItem.Name = "newAppsToolStripMenuItem";
+            this.newAppsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.newAppsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.newAppsToolStripMenuItem.Text = "New Apps";
+            this.newAppsToolStripMenuItem.Click += new System.EventHandler(this.newAppsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -104,7 +113,7 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
@@ -277,14 +286,6 @@
             this.bunifuCustomLabel1.Text = "Chase\'s App Launcher";
             this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
-            // newAppsToolStripMenuItem
-            // 
-            this.newAppsToolStripMenuItem.Name = "newAppsToolStripMenuItem";
-            this.newAppsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.newAppsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newAppsToolStripMenuItem.Text = "New Apps";
-            this.newAppsToolStripMenuItem.Click += new System.EventHandler(this.newAppsToolStripMenuItem_Click);
-            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +299,7 @@
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.tabs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.MaximizeBox = false;
             this.Name = "Launcher";
